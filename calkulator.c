@@ -10,7 +10,7 @@
 #include <stdlib.h>
 int main(void) {
     int kom,a,b,c,n,z,f=1;
-    printf("Team:\n\t Sum=1\n\t Difference=2\n\t Multiplication=3\n\t Division=4\n\t Degree=5\n\t Factorial=6\n\t");
+    printf("Team:\n\t Sum=1\n\t Difference=2\n\t Multiplication=3\n\t Division=4\n\t Degree=5\n\t Factorial=6\n\t If repeat=7 to stop programm\n\t");
     while (z!=7){
     printf("Type the command:");
     scanf("%d",&kom);
