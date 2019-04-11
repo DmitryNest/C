@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int a ;
+    int *x1 = (int *) malloc(1*sizeof(*x1));
+    int *y1 = (int *) malloc(1*sizeof(*y1));
+    int *x2 = (int *) malloc(1*sizeof(*x2));
+    int *y2 = (int *) malloc(1*sizeof(*y2));
+    int *sx = (int *) malloc(1*sizeof(*sx));
+    int *sy = (int *) malloc(1*sizeof(*sy));
+    int *vx = (int *) malloc(1*sizeof(*vx));
+    int *vy = (int *) malloc(1*sizeof(*vy));
+    int *sk = (int *) malloc(1*sizeof(*sk)); 
+    printf("введите первый вектор {x1;y1}:");
+    scanf("%d,%d",&x1[0],&y1[1]);
+    printf("введите второй вектор {x2;y2}:");
+    scanf("%d,%d",&x2[3],&y2[4]);
+    printf("Что считаем:\n 1.сумма векторов команда[0]\n 2.разность векторов команда[1]\n 3.скалярное произведение команда[2]\n Введите команду:"); 
+    scanf("%d",&a);
+    switch(a){
+        case 0:
+        sx[2]=x1[0]+x2[3];
+        sy[5]=y1[1]+y2[4];
+         printf("сумма={%d;%d}",sx[2],sy[5]);
+         break;
+         case 1:
+         vx[6]=x1[0]-x2[3];
+         vy[7]=y1[1]-y2[4];
+         printf("вычетание={%d;%d}",vx[6],vy[7]);
+         break;
+         case 2:
+         sk[8]=(x1[0]*x2[3])+(y1[1]*y2[4]);
+         printf("скалярное произведение=%d;\n",sk[8]);
+         break;
+        default:
+        printf("Команда введена не верно!");
+    }
+    return 0;
+}
