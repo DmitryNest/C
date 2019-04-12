@@ -51,9 +51,10 @@ int main(void) {
         scanf("%d",&a);
         printf("Enter the degree n=");
         scanf("%d",&n);
+        c=a;
         if(a>-10 && a<10 && n>0 && n<10){
             for(int i=1; i < n; ++i){
-                a=a*2;
+                a=a*c;
             }
             printf("Result= %d\n",a);
         }
