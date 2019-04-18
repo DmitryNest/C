@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main(void){
+  int a,n,kom;
+  float rezult,sum;
+  float *vector_a=NULL, *vector_b=NULL;
+  while(a!=0){
+        printf("Enter the memory size: ");
+  scanf("%d", &n);
+  if(n>0){
+      vector_a = malloc(n * sizeof(float));
+      for (int i = 0; i < n; i++){
+          printf("koordinata_vector_a[%d]",i);
+          scanf("%f",&vector_a[i]);
+      }
+      vector_b = malloc(n * sizeof(float));    
+      for (int i = 0; i < n; i++){
+          printf("koordinata_vector_b[%d]",i);
+          scanf("%f",&vector_b[i]);
+      }
+      
+      printf("What we do ?\n a) Аddition kom=1\n b) Subtraction kom=2\n c) Scalar product kom=3\n Type the command:");
+      scanf("%d",&kom);
+      switch(kom){
+          case 1:
+          printf("Rezult=\n");
+          for (int i = 0; i < n; i++){
+              rezult = vector_a[i] + vector_b[i];
+              printf("%f \t \n",rezult);
+          }
+          free(vector_a);
+          free(vector_b);
+          break;
+          case 2:
+          printf("Rezult=\n");
+          for (int i = 0; i < n; i++){
+              rezult = vector_a[i] - vector_b[i];
+              printf("%f \t \n ",rezult);
+          }
+          free(vector_a);
+          free(vector_b);
+          break;
+          case 3:
+          for (int i = 0; i < n; i++){
+              rezult = (vector_a[i] * vector_b[i]);
+              sum=sum+rezult;
+          }
+          
+          printf("Rezult=%f",sum);
+          free(vector_a);
+          free(vector_b);
+          break;
+    }
+  }
+  else{
+      printf("The command is entered incorrectly!\n");
+  }
+  printf("Repeat enter any digit \n Stop enter kom=0 \n Type the command:");
+  scanf("%d",&a);
+  }
+}
